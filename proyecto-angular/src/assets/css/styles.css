@@ -1,0 +1,397 @@
+/* Importamos fuentes: */
+@font-face{
+    font-family: "yanone";
+    src:url("../fonts/yanone.ttf");
+}
+
+@font-face{
+    font-family: "finger";
+    src:url("../fonts/finger.ttf");
+}
+/* Estilos Generales:*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-size: 20px;
+    font-family: "yanone",Arial,Helvetica;
+    background: url("../img/pattern.png"); /*Patron de fondo granulado*/
+    background-attachment: fixed; /*Fijamos el fondo para que no se mueva cuando scrolleamos*/
+}
+
+.clearfix{
+    float:none;
+    clear: both;
+}
+/* Barra de Navegación/ HEADER */
+
+header{
+    width: 100%;
+    height: 93px;
+    background: #5e35b1;
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+}
+
+header ul{
+    display: block;
+    width: 40%;
+    height: inherit;
+    margin:0px auto;
+    margin-top: -4px;
+}
+
+header ul li{
+    display:inline-block;
+    margin:0px auto;
+    text-align: center;
+    line-height: 88px;
+}
+
+header a{
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    text-decoration: none;
+    color:white;
+    transition: all 300ms;
+}
+
+header a:hover, 
+.actived{
+    background: rgba(0,0,0,0.8);
+}
+
+#logo{
+    font-family: "finger";
+    font-size: 30px;
+}
+#logo a{
+    transition: color 500ms, transform 500ms;
+
+}
+header #logo a:hover{
+    background: transparent;
+    color:black;
+    transform: scale(1.50,1.50);
+}
+
+/* Contenedor Principal*/
+
+#content{
+    min-height: 600px;
+    height: auto;
+    width: 75%;
+    margin:0 auto;
+    box-shadow: 0px 0px 40px black;
+    background: rgba(255,255,255,0.7);
+    padding-top: 120px;
+    border-left: 1px solid #b7b7b7;
+    border-right: 1px solid #b7b7b7;
+}
+
+/* Footer/ Pie de pagina */
+
+footer{
+    width: 75%;
+    margin: 0px auto;
+    padding-top: 15px;
+    color:rgba(0,0,0,0.5)
+}
+
+/* ABOUT/ SOBRE MÍ*/
+
+#title{
+    width: 70%;
+    margin:0px auto;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 20px;
+}
+
+#title h1{
+    font-family: "finger";
+    font-size: 50px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+#title h2{
+    font-size: 28px;
+    color:gray;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    letter-spacing: +4px;
+}
+
+#title p{
+    color:gray;
+    letter-spacing: +1px
+}
+
+article.about{
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.about h2{
+    padding-bottom: 1px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.about p{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: justify;
+}
+
+/* Seccion con formulario*/
+
+.container{
+    padding: 50px;
+    padding-top: 10px;
+}
+.container .image{
+    float: left;
+    width: 47%;
+}
+
+.container .image img{
+    float: left;
+    width: 100%;
+}
+.container .data{
+    float: left;
+    width: 48%;
+    margin-left: 30px;
+}
+
+.container h2{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    
+}
+
+form{
+    width: 80%;
+}
+form label{
+    display: block;
+    width: 100%;
+    margin-top:10px;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea{
+    width: 40%;
+    padding:5px;
+}
+
+form button,
+form input[type="submit"],
+.button-edit,
+.button-delete{
+    display: block;
+    font-size: 17px;
+    padding:10px;
+    margin-top: 15px;
+    color:white;
+    background: #5e35b1;
+    border:1px solid #493474;
+    cursor: pointer;
+    transition: 300ms;
+}
+form button:hover,
+form input[type="submit"]:hover{
+    background: #793fec;
+    border:1px solid #493474;
+    transition: 300ms;
+}
+form input[disabled]{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+.validator{
+    padding: 3px;
+    font-size: 17px;
+    background:rgb(156, 45, 45);
+    color:white;
+    margin-left: 5px;
+    /* AGREGAR TRANSITION AL SPAN*/ 
+}
+
+/* MENSAJE INFORMATIVO DE BASE DE DATOS */
+.message{
+    width: 50%;
+    padding: 10px;
+    border:1px solid #eee;
+}
+
+.success{
+    border-radius: 30px;
+    background: rgba(0, 128, 0, 0.658);
+    color:white;
+}
+.message a{
+    color:white;
+}
+.failed{
+    background:rgba(255, 0, 0, 0.658);
+    border-radius: 30px;
+    color:white;
+}
+
+/*Pagina de proyectos*/
+.project{
+    list-style: none;
+    display: block;
+    float: left;
+    width: 28%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+.project .image{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    transition: 500ms;
+}
+.project .image:hover{
+    transform: scale(1.1);
+    transition:500ms;
+}
+
+.project img{
+    width: 100%;
+}
+
+.project a{
+    text-decoration: none;
+    color:black;
+}
+
+.button-edit,
+.button-delete{
+    width: 40%;
+    float: left;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.button-edit:hover{
+    background: #793fec;
+    border:1px solid #493474;
+    transition: 500ms;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-delete{
+    background: rgba(255, 0, 0, 0.658);
+}
+.button-delete:hover{
+    background: rgb(255, 6, 6);
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: 500ms;
+}
+.confirm{
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 500ms;
+}
+.containerg{
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+}
+
+#texto{
+    width: 38%;
+    text-align: justify;
+    font-size: 1em;
+}
+
+.example_galery{
+    float: right;
+    width: 40%;
+}
+
+/* Sección de contactos:*/
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 92%;
+    height: 30vh;
+    padding: 0 2rem;
+    background: #333;
+    color:rgba(255,255,255,0.7);
+  }
+  
+  .contact-section-header > h2 {
+    font-size: 2rem;
+    margin-top: 2%;
+  }
+  
+  @media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+      font-size: 2.3rem;
+    }
+  }
+  
+  .contact-section-header > p {
+    font-style: italic;
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-details {
+    color:#5e35b1;
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px #78909C;
+    transition: transform 0.3s ease-out;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  
+  .contact-details:hover {
+    transform: translateY(8px);
+    color:#793fec;
+  }
+
+.linksEx{
+color:#5e35b1;
+transition: 500ms;
+  }
+
+.linksEx:hover{
+    color:#793fec;
+    font-size: 22px;
+    transition: 500ms;
+}

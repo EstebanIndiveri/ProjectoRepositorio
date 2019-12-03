@@ -1,0 +1,91 @@
+
+<div class="container">
+<h1>Contacto</h1>
+<br>
+    <p id="texto" #textos>
+    Esta es la pagina de contacto, puedes enviarnos cualquier duda
+    </p>
+
+<div class="container">
+        <div class="example_galery">
+            
+                <div class="bxslider">
+                        <div><img src="../../../assets/img/coffee1.jpg"></div>
+                        <div><img src="../../../assets/img/coffee2.jpg"></div>
+                        <div><img src="../../../assets/img/coffee3.jpg"></div>
+                      </div>
+                      <p>Imagenes ilustrativas</p>
+                    </div>
+        <form>
+            <p>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" required />
+                     
+            </p>
+    
+            <p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required />
+
+            </p>
+        
+
+            <p>
+                <label for="consulta">Consulta</label>
+                <textarea name="consulta" required></textarea>
+                         
+            </p>
+    
+            
+            <input type="submit" value="Enviar" />
+
+            
+        </form>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-section-header">
+              <h2>Let's work together...</h2>
+              <p>Comunicate conmigo</p>
+            </div>
+            <div class="contact-links">
+              <a
+                href="https://facebook.com/esteban-indiveri"
+                target="_blank"
+                class="btn contact-details"
+                ><i class="fab fa-facebook-square"></i> Facebook</a
+              >
+              <a
+                id="profile-link"
+                href="https://github.com/EstebanIndiveri"
+                target="_blank"
+                class="btn contact-details"
+                ><i class="fab fa-github"></i> GitHub</a
+              >
+              <a
+                href="https://twitter.com/esteban_tefa"
+                target="_blank"
+                class="btn contact-details"
+                ><i class="fab fa-twitter"></i> Twitter</a
+              >
+              <a href="mailto:esteban.indiveri@gmail.com" class="btn contact-details"
+                ><i class="fas fa-at"></i> Send a mail</a
+              >
+              <a href="tel:351269407" class="btn contact-details"
+                ><i class="fas fa-mobile-alt"></i> Call me</a
+              >
+            </div>
+
+    
+   
+
+<!--
+Tamaño del slider:
+<input type="number" [(ngModel)]="widthSlider" (key.enter)="cargarSlider()">
+<button (click)="cargarSlider()">Cargar slider</button>
+<button (click)="resetearSlider()">Resetear slider</button>
+<div *ngIf="anchuraToSlider">
+<app-slider [anchura]="anchuraToSlider"></app-slider>
+</div>
+</div>
+
+-->
